@@ -1,8 +1,7 @@
-from AppCoder.views import curso
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('curso/',curso),
+    path('appCoder/', include('AppCoder.urls')),
 ]
