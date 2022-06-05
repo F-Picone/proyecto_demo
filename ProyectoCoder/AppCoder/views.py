@@ -13,4 +13,3 @@ def mi_plantilla(self):
     plantilla = loader.get_template('plantilla.html')
     documento = plantilla.render()
     return HttpResponse(documento)
-    
