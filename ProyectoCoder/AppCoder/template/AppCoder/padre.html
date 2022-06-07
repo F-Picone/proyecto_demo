@@ -20,12 +20,12 @@
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="/appCoder/">Inicio</a>
-                <a class="btn" href="/appCoder/profesores">Profesores</a>
-                <a class="btn" href="/appCoder/cursos">Cursos</a>
-                <a class="btn" href="/appCoder/estudiantes">Estudiantes</a>
-                <a class="btn" href="/appCoder/entregables">Entregables</a>
-                <a class="btn btn-primary" href="/appCoder/">Iniciar</a>
+                <a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>
+                <a class="btn" href="{% url 'Profesores' %}">Profesores</a>
+                <a class="btn" href="{% url 'Cursos' %}">Cursos</a>
+                <a class="btn" href="{% url 'Estudiantes' %}">Estudiantes</a>
+                <a class="btn" href="{% url 'Entregables' %}">Entregables</a>
+                <a class="btn btn-primary" href="{% url 'Inicio' %}">Iniciar</a>
             </div>
         </nav>
         <!-- Masthead-->
@@ -36,6 +36,8 @@
                         <div class="text-center text-white">
                             <!-- Page heading-->
                             <h1 class="mb-5">Nuestra pagina web Django</h1>
+                            {% block section_name %}
+                            {% endblock %}
                             <!-- Signup form-->
                             <!-- * * * * * * * * * * * * * * *-->
                             <!-- * * SB Forms Contact Form * *-->
@@ -49,6 +51,9 @@
                 </div>
             </div>
         </header>
+        <!-- Este es el contenido que cambia-->
+        {% block contenidoQueCambia %}
+        {% endblock %}
         <!-- Footer-->
         <footer class="footer bg-light">
             <div class="container">
