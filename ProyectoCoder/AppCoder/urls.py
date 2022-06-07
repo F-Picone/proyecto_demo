@@ -1,5 +1,5 @@
 from django.urls import path
-from AppCoder.views import curso,inicio,cursos,entregables,estudiantes,profesores
+from AppCoder.views import curso,inicio,cursos,entregables,estudiantes,profesores,cursoFormulario
 
 
 urlpatterns = [
@@ -9,4 +9,5 @@ urlpatterns = [
     path('entregables/',entregables, name= 'Entregables'),
     path('cursos/',cursos, name= 'Cursos'),
     path('', inicio, name= 'Inicio'),
+    path('cursoFormulario/', cursoFormulario, name= 'cursoFormulario'),
 ]

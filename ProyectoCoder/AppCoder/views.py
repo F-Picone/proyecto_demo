@@ -27,3 +27,12 @@ def inicio(self):
     plantilla = loader.get_template('AppCoder/inicio.html')
     documento = plantilla.render()
     return HttpResponse(documento)
+
+def cursoFormulario(request):
+    if request.method == "POST":
+        nombre = request.POST['curso']
+        camada = request.POST['camada']
+        curso = Curso(nombre=nombre, camada=camada)
+        curso.save()
+        return render(request, 'AppCoder/inicio.html')
+    return render(request, 'appCoder/cursoFormulario.html')
